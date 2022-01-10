@@ -1,0 +1,31 @@
+{
+
+  "manifest_version": 2,
+  "name": "UU - easy 2fac",
+  "version": "1.0",
+
+  "description": "Automagically enters the TOTP for UU services",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://mfa.uu.nl/osp/a/TOP/"],
+      "js": ["script_injector.js"]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "jsSHA/*.js",
+    "autofill/*.js"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "some-name@example.org"
+    }
+  }
+}
