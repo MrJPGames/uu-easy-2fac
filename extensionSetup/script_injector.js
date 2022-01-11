@@ -4,6 +4,4 @@ function addScript(internalURL, defer = false){
 	document.getElementsByTagName("HEAD")[0].appendChild(scriptElem);
 }
 
-addScript("jsSHA/sha.js");
-addScript("autofill/totp.js");
-addScript("autofill/uu_autofill.js");
+addScript("extensionSetup/uu_hooker.js");

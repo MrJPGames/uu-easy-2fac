@@ -2,7 +2,7 @@ setTimeout(fillTOTPField, 1);
 
 function fillTOTPField(){
 	let totpObj = new TOTP();
-	let totp = totpObj.getOTP("P57HD7UONEUCZIBHLLG7DI2TAGZELAU2");
+	let totp = totpObj.getOTP(window.uuez2faSecret);
 	console.log(totp);
 	let textField = document.getElementById("nffc");
 	textField.value = totp;
